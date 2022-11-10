@@ -120,6 +120,10 @@ ul {
     
 }
 
+.icon-header {
+    margin-right: 10px;
+}
+
 .item-nav:hover,
 .item-nav:focus {
     color: var(--accent-color); 
