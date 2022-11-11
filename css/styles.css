@@ -164,7 +164,10 @@ ul {
      rgba(47, 48, 58, 0.4)), 
     url(../images/background.jpg);
     background-repeat: no-repeat;
-    background-position: center;    
+    background-position: center;
+    background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;     
 }
 
 
@@ -260,7 +263,6 @@ ul {
 
 .features-icons {
     display: flex;
-    width: 270px;
     height: 120px;
     background-color: #F5F4FA;
     gap: 30px;
@@ -345,8 +347,7 @@ ul {
     display: flex; 
     justify-content: center;
     gap: 10px;
-    padding-bottom: 30px;
-    
+    padding-top: 16px; 
  }
 
 .soc-link {
@@ -373,6 +374,10 @@ ul {
     fill: var(--svg-color); 
 }
 
+.soc-link:focus .soc-svg {
+    fill: var(--svg-color); 
+}
+
 
 /* ------НАШІ КЛІЄНТИ------- */
 
@@ -381,7 +386,6 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-top: 50px;
 }
 
 .client-svg {
@@ -393,7 +397,6 @@ ul {
 }
 
 .client-link {
-    width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -401,8 +404,14 @@ ul {
     align-items: center;
     justify-content: center;
 }
+.client-item {
+    flex-basis: calc((100% - 60px)/6)
+}
 
-.client-link:hover  .client-svg {
+.client-link:hover .client-svg {
+    fill: var(--accent-color);
+}
+.client-link:focus .client-svg {
     fill: var(--accent-color);
 }
 
@@ -418,15 +427,16 @@ ul {
 } 
 
 .footer-page {
-    
     background-color: var(--footer-background-color);
+    color: var(--hero-title-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.footer-page .item-info {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--hero-title-color);
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
 .footer-page .logo {
@@ -532,6 +542,11 @@ ul {
     0px 1px 2px rgba(0, 0, 0, 0.08), 
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.portfolio-item .link {
+    display:block;
+}
+
 
 .portfolio-item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
